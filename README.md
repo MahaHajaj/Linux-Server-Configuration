@@ -31,12 +31,12 @@ The aim of the project to take a baseline installation of a Linux server and pre
    - Reload SSH using ```sudo nano /etc/ssh/sshd_config```.
 5. Configure the Uncomplicated Firewall (UFW).
    - Configure to allow incoming connections for SSH (port 2200), HTTP (port 80), and NTP (port 123).
-   ```
-   sudo ufw allow 2200/tcp
-   sudo ufw allow 80/tcp
-   sudo ufw allow 123/udp
-   sudo ufw enable
-   ```
+     ```
+     sudo ufw allow 2200/tcp
+     sudo ufw allow 80/tcp
+     sudo ufw allow 123/udp
+     sudo ufw enable
+     ```
 - **Give ```grader``` access :**
 6. Create a new user account named ```grader```.
    - ```sudo adduser grader```
@@ -55,10 +55,10 @@ The aim of the project to take a baseline installation of a Linux server and pre
      ```
     - Paste publice key then save and exit.
     - Set the permissions using
-    ```
-    chmod 700 .ssh
-    chmod 644 .ssh/authorized_keys
-    ```
+      ```
+      chmod 700 .ssh
+      chmod 644 .ssh/authorized_keys
+      ```
     - login using ```ssh grader@[ip-address] -p 2200 -i ~/.ssh/[filename]```
     - To enforce key-based authentication run ```sudo nano /etc/ssh/sshd_config```
     - Change the PasswordAuthentication to no then save and exit.
