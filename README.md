@@ -9,17 +9,17 @@ The aim of the project to take a baseline installation of a Linux server and pre
 - The SSH port is 2200
 - The complete URL is
 
-##Steps to Configure Linux server :
-**Get your server**
-1. Start a new Ubuntu Linux server instance on [Amazon Lightsail](https://lightsail.aws.amazon.com/).
-   - Log in!
-   - Create an instance.
-   - Choose an instance image: Ubuntu.
-   - Choose your instance plan.
-   - Give your instance a hostname.
-   - Wait for it to start up.
+## Steps to Configure Linux server :
+- **Get your server :**
+ 1. Start a new Ubuntu Linux server instance on [Amazon Lightsail](https://lightsail.aws.amazon.com/).
+     - Log in!
+     - Create an instance.
+     - Choose an instance image: Ubuntu.
+     - Choose your instance plan.
+     - Give your instance a hostname.
+     - Wait for it to start up.
 2. SSH into the server.
-**Secure your server**
+- **Secure your server :**
 3. Update all currently installed packages.
    ```
    sudo apt-get update
@@ -37,7 +37,7 @@ The aim of the project to take a baseline installation of a Linux server and pre
    sudo ufw allow 123/udp
    sudo ufw enable
    ```
-**Give ```grader``` access**
+- **Give ```grader``` access :**
 6. Create a new user account named ```grader```.
    - ```sudo adduser grader```
 7. Give ```grader``` the permission to ```sudo```.
@@ -63,11 +63,11 @@ The aim of the project to take a baseline installation of a Linux server and pre
     - To enforce key-based authentication run ```sudo nano /etc/ssh/sshd_config```
     - Change the PasswordAuthentication to no then save and exit.
     - Restart using ```sudo service ssh restart```
-**Prepare to deploy your project**
+- **Prepare to deploy your project :**
 9. Configure the local timezone to UTC.
 10. Install and configure Apache to serve a Python mod_wsgi application.
 11. Install and configure PostgreSQL.
 12. Install ```git```.
-**Deploy the Item Catalog project**
+- **Deploy the Item Catalog project :**
 13. Clone and setup your Item Catalog project from the Github repository you created earlier in this Nanodegree program.
 14. Set it up in your server so that it functions correctly when visiting your server’s IP address in a browser. Make sure that your ```.git``` directory is not publicly accessible via a browser!
